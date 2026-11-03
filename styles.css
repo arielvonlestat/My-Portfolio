@@ -1,0 +1,58 @@
+:root {
+  --Placeholder1: #f4efe8;
+  --Placeholder2: #d8c9b6;
+  --Placeholder3: #34443b;
+  --Placeholder4: #9b7058;
+  --Placeholder5: #c49a55;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Assets/Fonts/Inter/static/Inter_18pt-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Assets/Fonts/Inter/static/Inter_18pt-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Assets/Fonts/Inter/static/Inter_18pt-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("Assets/Fonts/Inter/static/Inter_18pt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
