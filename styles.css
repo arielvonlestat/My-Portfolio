@@ -1,9 +1,9 @@
 :root {
-  --Placeholder1: #f4efe8;
-  --Placeholder2: #d8c9b6;
-  --Placeholder3: #34443b;
-  --Placeholder4: #9b7058;
-  --Placeholder5: #c49a55;
+  --Text: #f4efe8;
+  --HeaderText: #d8c9b6;
+  --HeaderBackground: #34443b;
+  --AccentGold: #cba76c;
+  --MainBackground: #403a34;
 }
 
 @font-face {
@@ -50,9 +50,200 @@
 
 @font-face {
   font-family: "Playfair Display";
+  src: url("Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("Assets/Fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
   src: url("Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.woff2")
     format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--HeaderBackground);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--Text);
+}
+
+footer {
+  padding-top: 2rem;
+}
+
+/* INTRO SECTION */
+.intro {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  grid-column: 1 / -1;
+}
+
+.intro h1 {
+  font-size: 2.6875rem;
+  font-weight: 500;
+  color: var(--Text);
+  grid-column: 1;
+  padding-left: 1rem;
+}
+
+.intro p {
+  grid-column: 3 / 5;
+  font-size: 1.5rem;
+  padding-left: 2.2rem;
+  line-height: 1.7rem;
+}
+
+/* MAIN NAVIGATION */
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  grid-column: 1 / -1;
+}
+
+.navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--HeaderBackground);
+  border: 3px solid var(--HeaderText);
+  border-radius: 20px;
+  padding-block: 6.7rem;
+  text-align: center;
+  color: var(--HeaderText);
+}
+
+/* OUTRO SECTION */
+.outro {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  grid-column: 1 / -1;
+}
+
+.outro p {
+  grid-column: 1 / 3;
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+
+.outro h2 {
+  grid-column: 4;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--Text);
+  padding-left: 1rem;
+}
+
+.line {
+  grid-column: 1/5;
+  border: 2px solid var(--AccentGold);
+}
+
+.bottom-navigation {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#realresume,
+#fakeresume {
+  text-decoration: none;
+  font-size: 1.875rem;
+  font-weight: 600;
+  background-color: var(--HeaderBackground);
+  border: 3px solid var(--HeaderText);
+  border-radius: 20px;
+  padding-inline: 4.24rem;
+  padding-block: 1.19rem;
+  text-align: center;
+  color: var(--HeaderText);
+}
+
+.linkicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* MAIN HERO CONTAINER */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 20px 25px;
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  background-color: var(--MainBackground);
+  border: 6px solid var(--Text);
+  border-radius: 10px;
+}
+
+/* HOVER MENUS */
+
+.popup-aboutme {
+  width: 303px;
+  height: 255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--HeaderBackground);
+  border: 3px solid var(--HeaderText);
+  border-radius: 20px;
+  text-align: center;
+  color: var(--HeaderText);
+  display: none;
+  position: absolute;
+  top: 0;
+}
+
+.popup-aboutme h2 {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.aboutme:hover ~ .popup-aboutme {
+  display: block;
+}
+
+.about {
+  position: relative;
 }
