@@ -216,34 +216,32 @@ footer {
 /* HOVER MENUS */
 
 .popup-aboutme {
-  width: 303px;
-  height: 255px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  background-color: var(--HeaderBackground);
-  border: 3px solid var(--HeaderText);
-  border-radius: 20px;
-  text-align: center;
-  color: var(--HeaderText);
+  width: 100%;
+  height: 100%;
   display: none;
   position: absolute;
   top: 0;
-}
+  left: 0;
+  z-index: 10;
 
-.popup-aboutme h2 {
-  text-decoration: underline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 1.5rem;
+  background-color: var(--HeaderText);
+  border: 3px solid var(--HeaderText);
+  border-radius: 20px;
+  text-align: center;
   font-size: 1.5rem;
-}
-
-.aboutme:hover ~ .popup-aboutme {
-  display: block;
+  color: var(--HeaderBackground);
 }
 
 .about {
   position: relative;
+}
+
+.about:hover .popup-aboutme {
+  display: flex;
 }
