@@ -1,0 +1,142 @@
+:root {
+  --Text: #f4efe8;
+  --HeaderText: #d8c9b6;
+  --HeaderBackground: #34443b;
+  --AccentGold: #cba76c;
+  --MainBackground: #403a34;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Assets/Fonts/Inter/static/Inter_18pt-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+#aboutme-page {
+  padding: 4rem;
+}
+
+.aboutme-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--MainBackground);
+  border: 4px solid var(--AccentGold);
+  border-radius: 10px;
+}
+
+.aboutme-page h1 {
+  position: relative;
+  bottom: 1rem;
+  padding-block: 2.0625rem;
+  padding-inline: 8.5625rem;
+  font-size: 3.875rem;
+  border: 2px solid var(--HeaderText);
+  border-radius: 20px;
+  background-color: var(--HeaderBackground);
+  color: var(--HeaderText);
+}
+
+.aboutme-page p {
+  text-align: center;
+  font-size: 2rem;
+  padding-inline: 2rem;
+}
+
+.aboutme-page h2 {
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  font-size: 2rem;
+  border: 2px solid var(--HeaderText);
+  border-radius: 20px;
+  background-color: var(--HeaderBackground);
+  color: var(--HeaderText);
+}
+
+#aboutme-introduction {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2.875rem;
+  line-height: 2.5rem;
+}
+
+#aboutme-learning,
+#aboutme-more,
+#aboutme-less {
+  padding-block: 2.875rem;
+  line-height: 2.5rem;
+}
+
+blockquote {
+  padding-block: 2.875rem;
+  font-size: 2rem;
+  color: var(--AccentGold);
+}

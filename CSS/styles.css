@@ -81,7 +81,7 @@
 
 body {
   background-color: var(--HeaderBackground);
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", "Inter";
   font-size: 1rem;
   font-weight: 400;
   min-height: 100vh;
@@ -209,7 +209,7 @@ footer {
   max-width: 1320px;
   margin-inline: auto;
   background-color: var(--MainBackground);
-  border: 6px solid var(--Text);
+  border: 6px solid var(--AccentGold);
   border-radius: 10px;
 }
 
