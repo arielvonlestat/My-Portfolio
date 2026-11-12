@@ -1,0 +1,114 @@
+#skills-page {
+  padding: 4rem;
+  font-size: 2rem;
+}
+
+.skills-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--MainBackground);
+  border: 4px solid var(--AccentGold);
+  border-radius: 10px;
+}
+
+.skills-page h1 {
+  position: relative;
+  bottom: 1rem;
+  padding-block: 2.0625rem;
+  padding-inline: 8.5625rem;
+  font-size: 3.875rem;
+  border: 2px solid var(--HeaderText);
+  border-radius: 20px;
+  background-color: var(--HeaderBackground);
+  color: var(--HeaderText);
+}
+
+.skill-boxes {
+  padding: 0.5rem;
+  background-color: var(--HeaderBackground);
+  border: 2px solid var(--HeaderText);
+  border-radius: 20px;
+  width: 385px;
+}
+
+.skill-boxes h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.skill-boxes p {
+  font-size: 1.875rem;
+}
+
+#git-github img {
+  width: 50px;
+  height: 50px;
+}
+
+#html-css,
+#javascript,
+#git-github,
+#figma {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#javascript,
+#figma {
+  padding: 1.5rem;
+  align-items: flex-start;
+}
+
+.skill-box-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-box-text h2 {
+  color: var(--HeaderText);
+  text-decoration: underline;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.skill-box-text p {
+  padding-left: 0.5rem;
+  line-height: 2.5rem;
+}
+
+.skill-box-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+  padding: 1rem;
+}
+
+#skill-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  column-gap: 5rem;
+  row-gap: 2.875rem;
+}
+
+#html-css {
+}
+
+#javascript {
+  grid-row: 2;
+}
+
+#git-github {
+  grid-row: 3;
+}
+
+#figma {
+  grid-row: 4;
+}
