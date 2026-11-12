@@ -1,0 +1,33 @@
+#projects-page {
+  padding: 4rem;
+}
+
+.projects-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--MainBackground);
+  border: 4px solid var(--AccentGold);
+  border-radius: 10px;
+  padding-bottom: 3rem;
+  gap: 3.4rem;
+}
+
+.projects-page h1 {
+  position: relative;
+  bottom: 1rem;
+  padding-block: 2.0625rem;
+  padding-inline: 8.5625rem;
+  font-size: 3.875rem;
+  border: 2px solid var(--HeaderText);
+  border-radius: 20px;
+  background-color: var(--HeaderBackground);
+  color: var(--HeaderText);
+}
+
+.projects-line {
+  border: 2px solid var(--AccentGold);
+  width: 100%;
+}
