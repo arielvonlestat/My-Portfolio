@@ -1,6 +1,5 @@
 #skills-page {
-  /* padding-block: 4rem; */
-  font-size: 2rem;
+  padding: 4rem;
 }
 
 .skills-page {
@@ -29,16 +28,17 @@
 
 .skill-boxes {
   background-color: var(--HeaderBackground);
-  border: 2px solid var(--HeaderText);
+  border: 2px solid var(--AccentGold);
   border-radius: 20px;
 }
 
 .skill-boxes h2 {
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
 .skill-boxes p {
-  font-size: 1.875rem;
+  font-size: 1.6rem;
 }
 
 #git-github img {
@@ -55,6 +55,7 @@
   align-items: flex-start;
   padding-top: 1rem;
   padding-left: 1rem;
+  padding-right: 0.5rem;
 }
 
 #javascript,
@@ -119,7 +120,7 @@
 #git-github-box2,
 #figma-box1,
 #figma-box2 {
-  padding-top: 0.7rem;
+  padding-top: 0.5rem;
   line-height: 2.8rem;
   text-align: center;
   color: var(--AccentGold);
@@ -132,7 +133,7 @@
 #git-github-box2,
 #figma-box1,
 #figma-box2 {
-  padding-top: 3.5rem;
+  padding-top: 3.3rem;
 }
 
 #javascript {
@@ -150,14 +151,14 @@
 #notes-taken,
 #contrast-ratios {
   background-color: var(--HeaderBackground);
-  border: 2px solid var(--HeaderText);
+  border: 3px solid var(--AccentGold);
   border-radius: 20px;
   text-align: center;
   padding-block: 1rem;
   padding-inline: 1rem;
   font-size: 1.69rem;
   line-height: 2rem;
-  color: var(--HeaderText);
+  color: var(--Text);
   font-family: "inter", sans-serif;
   font-weight: 500;
 }
@@ -167,6 +168,6 @@
 
 footer {
   display: flex;
-  gap: 11rem;
+  gap: 8rem;
   margin-top: -2rem;
 }
