@@ -6,6 +6,10 @@
   --MainBackground: #403a34;
 }
 
+:root {
+  --font-scale: 1;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../Assets/Fonts/Inter/static/Inter_18pt-Regular.woff2")
@@ -82,9 +86,10 @@
 }
 
 body {
+  padding: 4rem;
   background-color: var(--HeaderBackground);
   font-family: "Playfair Display", "Inter";
-  font-size: 1rem;
+  font-size: calc(2.2rem * var(--font-scale));
   font-weight: 400;
   min-height: 100vh;
   display: flex;
@@ -101,13 +106,13 @@ footer {
 /* INTRO SECTION */
 .intro {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 15px;
   grid-column: 1 / -1;
 }
 
 .intro h1 {
-  font-size: 2.6875rem;
+  font-size: calc(2.6875rem * var(--font-scale));
   font-weight: 500;
   color: var(--Text);
   grid-column: 1;
@@ -116,7 +121,7 @@ footer {
 
 .intro p {
   grid-column: 3 / 5;
-  font-size: 1.5rem;
+  font-size: calc(1.5rem * var(--font-scale));
   padding-left: 2.2rem;
   line-height: 1.7rem;
 }
@@ -124,7 +129,8 @@ footer {
 /* MAIN NAVIGATION */
 .navigation {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); */
   gap: 15px;
   grid-column: 1 / -1;
 }
@@ -133,13 +139,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.2rem;
   font-weight: 600;
   text-decoration: none;
   background-color: var(--HeaderBackground);
   border: 3px solid var(--HeaderText);
   border-radius: 20px;
-  padding-block: 6.7rem;
+  min-height: 256px;
   text-align: center;
   color: var(--HeaderText);
 }
@@ -148,23 +153,26 @@ footer {
 .outro {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
   grid-column: 1 / -1;
 }
 
 .outro p {
   grid-column: 1 / 3;
-  font-size: 1.5rem;
+  font-size: calc(1.5rem * var(--font-scale));
   line-height: 1.7rem;
 }
 
 .outro h2 {
   grid-column: 4;
-  font-size: 2.2rem;
   font-weight: 500;
   color: var(--Text);
-  padding-left: 1rem;
+  font-size: calc(2.2rem * var(--font-scale));
+  align-self: center;
+  justify-self: flex-end;
+  padding-right: 0.5rem;
 }
+
+/* Bottom Navigation */
 
 .line {
   grid-column: 1/5;
@@ -182,12 +190,12 @@ footer {
 #realresume,
 #fakeresume {
   text-decoration: none;
-  font-size: 1.875rem;
+  font-size: calc(1.5rem * var(--font-scale));
   font-weight: 600;
   background-color: var(--HeaderBackground);
   border: 3px solid var(--HeaderText);
   border-radius: 20px;
-  padding-inline: 4.24rem;
+  padding-inline: 2rem;
   padding-block: 1.19rem;
   text-align: center;
   color: var(--HeaderText);
@@ -200,6 +208,10 @@ footer {
   gap: 2rem;
 }
 
+.linkicons img {
+  transform: scale(0.8);
+}
+
 /* MAIN HERO CONTAINER */
 .hero {
   display: grid;
@@ -207,9 +219,7 @@ footer {
   column-gap: 15px;
   row-gap: 15px;
   padding: 20px 25px;
-  width: 100%;
   max-width: 1320px;
-  margin-inline: auto;
   background-color: var(--MainBackground);
   border: 6px solid var(--AccentGold);
   border-radius: 10px;
@@ -240,7 +250,7 @@ footer {
   border: 3px solid var(--HeaderText);
   border-radius: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: calc(1.5rem * var(--font-scale));
   color: var(--HeaderBackground);
 }
 
@@ -259,5 +269,63 @@ footer {
 }
 
 .email-popup {
-  font-size: 1rem;
+  font-size: calc(1rem * var(--font-scale));
+}
+
+#hidden-text {
+  display: none;
+}
+
+@media (max-width: 1320px) {
+  h1 {
+    align-self: center;
+  }
+
+  .outro h2 {
+    --font-scale: 0.8;
+  }
+
+  .popup-aboutme,
+  .popup-projects,
+  .popup-skills,
+  .popup-contact {
+    --font-scale: 0.8;
+  }
+
+  .outro h2,
+  .intro p,
+  .outro p {
+    --font-scale: 0.8;
+  }
+}
+
+@media (max-width: 1140px) {
+  .intro,
+  .outro,
+  .bottom-navigation,
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .intro p,
+  .outro p {
+    padding-inline: 5rem;
+    --font-scale: 1;
+    text-align: center;
+  }
+
+  .navigation a {
+    margin-inline: 5rem;
+  }
+
+  #shown-text {
+    display: none;
+  }
+
+  #hidden-text {
+    display: block;
+  }
 }
