@@ -128,6 +128,10 @@
   line-height: 2.5rem;
 }
 
+#aboutme-introduction span {
+  font-style: italic;
+}
+
 #aboutme-learning,
 #aboutme-more,
 #aboutme-less {
@@ -139,4 +143,5 @@ blockquote {
   padding-block: 2.875rem;
   font-size: 2rem;
   color: var(--AccentGold);
+  font-style: italic;
 }
