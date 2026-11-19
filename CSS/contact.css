@@ -1,6 +1,6 @@
 #contact-page {
   padding: 4rem;
-  font-size: 2rem;
+  font-size: calc(2rem * var(--font-scale));
 }
 
 .contact-page {
@@ -19,7 +19,7 @@
   bottom: 1rem;
   padding-block: 2.0625rem;
   padding-inline: 8.5625rem;
-  font-size: 3.875rem;
+  font-size: calc(3.875rem * var(--font-scale));
   border: 2px solid var(--HeaderText);
   border-radius: 20px;
   background-color: var(--HeaderBackground);
@@ -28,9 +28,11 @@
 
 .contact-page p {
   text-align: center;
-  padding-block: 1rem;
-  width: 50%;
+  padding-block: 0.5rem;
+  padding-inline: 0.5rem;
+  width: 80%;
   line-height: 2.5rem;
+  text-wrap: balance;
 }
 
 #contact-email,
@@ -42,7 +44,7 @@
 }
 
 #contacts {
-  padding-block: 2.875rem;
+  padding-block: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -60,4 +62,93 @@
 #contacts h2 {
   text-align: center;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .contact-page h1 {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 966px) {
+  #contact-page {
+    text-wrap: balance;
+  }
+  .contact-page {
+    --font-scale: 0.8;
+  }
+
+  .contact-page p {
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+  }
+
+  #contact-email,
+  #contact-linkedin,
+  #contact-github,
+  #contact-frontendmentor {
+    padding-block: 0;
+  }
+
+  #contacts {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    gap: 1rem;
+  }
+
+  #contacts a {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #contacts h2 {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  #contacts img {
+    transform: scale(0.5);
+  }
+}
+
+@media (max-width: 708px) {
+  body {
+    background-color: var(--HeaderBackground);
+  }
+  .contact-page {
+    border: none;
+    background-color: var(--HeaderBackground);
+  }
+  .contact-page h1 {
+    border: none;
+    background-color: var(--HeaderBackground);
+    padding: 0;
+    bottom: 0;
+    --font-scale: 0.6;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--AccentGold);
+    text-underline-offset: 8px;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 478px) {
+  .contact-page h1 {
+    --font-scale: 0.5;
+  }
+  .contact-page p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 413px) {
+  .contact-page h1 {
+    --font-scale: 0.4;
+  }
+
+  .contact-page p {
+    font-size: 1.3rem;
+  }
 }
