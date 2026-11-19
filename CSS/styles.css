@@ -8,6 +8,7 @@
 
 :root {
   --font-scale: 1;
+  font-size: calc(16px * var(--font-scale));
 }
 
 @font-face {
@@ -100,7 +101,6 @@ body {
 }
 
 footer a {
-  text-decoration: none;
   color: var(--HeaderText);
   font-size: 1rem;
 }

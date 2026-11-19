@@ -1,86 +1,3 @@
-:root {
-  --Text: #f4efe8;
-  --HeaderText: #d8c9b6;
-  --HeaderBackground: #34443b;
-  --AccentGold: #cba76c;
-  --MainBackground: #403a34;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Regular.woff2")
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Medium.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../Assets/Fonts/Inter/static/Inter_18pt-SemiBold.woff2")
-    format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("../Assets/Fonts/Inter/static/Inter_18pt-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Regular.woff2")
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Medium.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-SemiBold.woff2")
-    format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../Assets/Fonts/Playfair_Display/static/PlayfairDisplay-Bold.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-#aboutme-page {
-  padding: 4rem;
-}
-
 .aboutme-page {
   display: flex;
   flex-direction: column;
@@ -94,10 +11,10 @@
 
 .aboutme-page h1 {
   position: relative;
-  bottom: 1rem;
+  bottom: 1.5rem;
   padding-block: 2.0625rem;
-  padding-inline: 8.5625rem;
-  font-size: 3.875rem;
+  padding-inline: 5rem;
+  font-size: calc(3.875rem * var(--font-scale));
   border: 2px solid var(--HeaderText);
   border-radius: 20px;
   background-color: var(--HeaderBackground);
@@ -106,14 +23,14 @@
 
 .aboutme-page p {
   text-align: center;
-  font-size: 2rem;
+  font-size: calc(2rem * var(--font-scale));
   padding-inline: 2rem;
 }
 
 .aboutme-page h2 {
   padding-block: 1.5rem;
   padding-inline: 1.5rem;
-  font-size: 2rem;
+  font-size: calc(2rem * var(--font-scale));
   border: 2px solid var(--HeaderText);
   border-radius: 20px;
   background-color: var(--HeaderBackground);
@@ -123,9 +40,15 @@
 #aboutme-introduction {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding-top: 2.875rem;
   line-height: 2.5rem;
+}
+
+#aboutme-introduction p {
+  width: 80%;
+  text-wrap: balance;
 }
 
 #aboutme-introduction span {
@@ -139,9 +62,83 @@
   line-height: 2.5rem;
 }
 
+#aboutme-less p,
+#aboutme-more p,
+#aboutme-learning p,
+blockquote {
+  text-wrap: balance;
+}
+
 blockquote {
   padding-block: 2.875rem;
-  font-size: 2rem;
+  font-size: calc(2rem * var(--font-scale));
   color: var(--AccentGold);
   font-style: italic;
+  text-align: center;
+  width: 97%;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 902px) {
+  .aboutme-page h1 {
+    padding-inline: 1.5rem;
+    --font-scale: 0.7;
+  }
+
+  :root {
+    --font-scale: 0.8;
+  }
+}
+
+@media (max-width: 646px) {
+  body {
+    background-color: var(--HeaderBackground);
+    padding-top: 4rem;
+  }
+
+  footer {
+    padding-bottom: 2rem;
+  }
+
+  .aboutme-page {
+    border: none;
+    background-color: var(--HeaderBackground);
+  }
+
+  .aboutme-page h1 {
+    border: none;
+    background-color: var(--HeaderBackground);
+    padding: 0;
+    bottom: 0;
+    --font-scale: 0.9;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--AccentGold);
+    text-underline-offset: 8px;
+  }
+
+  :root {
+    --font-scale: 0.8;
+  }
+
+  .aboutme-page h2 {
+    padding: 0;
+    --font-scale: 1.2;
+    border: none;
+    background-color: var(--HeaderBackground);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--AccentGold);
+    text-underline-offset: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutme-page h1 {
+    --font-scale: 0.7;
+  }
+
+  .aboutme-page h2 {
+    --font-scale: 1;
+  }
 }
