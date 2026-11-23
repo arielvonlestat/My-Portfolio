@@ -41,6 +41,12 @@
 #contact-frontendmentor {
   padding: 2.875rem;
   border: 2px solid var(--AccentGold);
+  background-color: var(--HeaderBackground);
+}
+
+#contact-email img {
+  width: 65px;
+  height: 65px;
 }
 
 #contacts {
@@ -136,6 +142,15 @@
     text-decoration-color: var(--AccentGold);
     text-underline-offset: 8px;
     padding-bottom: 1rem;
+  }
+
+  #contact-email,
+  #contact-linkedin,
+  #contact-github,
+  #contact-frontendmentor {
+    padding: 2.875rem;
+    border: 2px solid var(--AccentGold);
+    background-color: var(--MainBackground);
   }
 }
 
