@@ -170,9 +170,8 @@ footer {
 
 #credit a {
   padding-top: 1rem;
-  text-decoration: none;
   color: var(--HeaderText);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 1355px) {
