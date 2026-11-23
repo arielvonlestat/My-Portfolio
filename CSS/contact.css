@@ -87,28 +87,33 @@
   #contact-linkedin,
   #contact-github,
   #contact-frontendmentor {
-    padding-block: 0;
+    padding-block: 1rem;
+    min-height: 126px;
   }
 
   #contacts {
     display: grid;
-    grid-template-columns: repeat (2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   #contacts a {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 1rem;
+  }
+
+  #contact-email a {
+    gap: 0.5rem;
   }
 
   #contacts h2 {
     font-size: 1.5rem;
-    padding-bottom: 2rem;
   }
 
   #contacts img {
-    transform: scale(0.5);
+    max-width: 50px;
+    max-height: 50px;
   }
 }
 
