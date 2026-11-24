@@ -5,35 +5,58 @@ const tablet = window.matchMedia(
 const aboutContainer = document.querySelector("#about");
 const aboutLink = document.querySelector(".aboutme");
 const aboutPopup = document.querySelector(".popup-aboutme");
+const navigationContainers = document.querySelectorAll(
+  ".navigation > div:not(.popup-invitation)",
+);
 
 let popupInfo = document.querySelector(".popup-info");
 let popupInvitation = document.querySelector(".popup-invitation");
 
-let aboutSelected = false;
 let popupTimer;
+let activeContainer = null;
+let activePopup = null;
 
 if (tablet.matches === true) {
-  aboutLink.addEventListener("click", (event) => {
-    if (aboutSelected === false) {
-      event.preventDefault();
-      aboutSelected = true;
-      aboutPopup.classList.add("active");
-      popupTimer = setTimeout(() => {
-        popupInfo.classList.add("hidden");
-        popupInvitation.classList.add("visible");
-      }, 3000);
-    } else {
-      clearTimeout(popupTimer);
-    }
+  navigationContainers.forEach((container) => {
+    const link = container.querySelector("a");
+    const popup = container.querySelector("div");
+    link.addEventListener("click", (event) => {
+      if (activeContainer === container) {
+      } else {
+        event.preventDefault();
+        if (activeContainer !== null) {
+          clearTimeout(popupTimer);
+          popupInvitation.classList.remove("visible");
+
+          const previousPopup = activeContainer.querySelector("div");
+          previousPopup.classList.remove("active");
+          previousPopup.classList.remove("hidden");
+        }
+
+        activeContainer = container;
+
+        popup.classList.add("active");
+
+        activePopup = popup;
+
+        container.append(popupInvitation);
+
+        popupTimer = setTimeout(() => {
+          activePopup.classList.add("hidden");
+          popupInvitation.classList.add("visible");
+        }, 4000);
+      }
+    });
   });
 
   document.addEventListener("click", (event) => {
-    if (!aboutContainer.contains(event.target)) {
+    if (activeContainer !== null && !activeContainer.contains(event.target)) {
+      activePopup.classList.remove("active");
+      activePopup.classList.remove("hidden");
       clearTimeout(popupTimer);
-      aboutSelected = false;
-      aboutPopup.classList.remove("active");
-      popupInfo.classList.remove("hidden");
       popupInvitation.classList.remove("visible");
+      activeContainer = null;
+      activePopup = null;
     }
   });
 }

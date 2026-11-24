@@ -260,10 +260,23 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.popup-invitation {
+  justify-content: center;
+  align-items: center;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  pointer-events: none;
+  padding: 1.5rem;
+  background-color: var(--HeaderText);
+  border: 3px solid var(--HeaderText);
+  border-radius: 20px;
+  text-align: center;
+  font-size: calc(1.5rem * var(--font-scale));
+  color: var(--HeaderBackground);
 }
 
 #about,
@@ -492,12 +505,4 @@ footer a {
   .hero {
     border: none;
   }
-}
-
-@media (hover: hover) and (pointer: fine) {
-  /* Desktop hover behavior */
-}
-
-@media (hover: none) {
-  /* Touch-oriented behavior */
 }
