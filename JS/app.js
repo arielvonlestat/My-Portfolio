@@ -59,4 +59,15 @@ if (tablet.matches === true) {
       activePopup = null;
     }
   });
+
+  window.addEventListener("pageshow", () => {
+    clearTimeout(popupTimer);
+    if (activePopup !== null) {
+      activePopup.classList.remove("active");
+      activePopup.classList.remove("hidden");
+    }
+    popupInvitation.classList.remove("visible");
+    activeContainer = null;
+    activePopup = null;
+  });
 }
